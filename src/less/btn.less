@@ -1,13 +1,41 @@
 .btn {
   border: 0;
-  background: none;
+  display: block;
+  box-sizing: border-box;
+  width: 190px;
+  margin: 0 auto;
+  padding: 21px 29px;
+  text-align: left;
   cursor: pointer;
+  background: linear-gradient(140.6deg, #3e6ff9 -27.18%, #3e53fb 126.06%);
+  box-shadow: 0 0 49px rgba(42, 7, 254, 0.4);
+  border-radius: 10px;
 
-  &--menu {
+  font-family: "Mazzard", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 14px;
     width: 32px;
-    height: 8px;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-    box-sizing: border-box;
+    height: 32px;
+    background: url("../../public/img/button-decor.svg") no-repeat;
+  }
+
+  &--without-icon {
+    text-align: center;
+    line-height: 15px;
+
+    &::after {
+      width: 0;
+      height: 0;
+    }
   }
 }

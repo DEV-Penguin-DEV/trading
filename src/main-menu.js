@@ -1,31 +1,30 @@
 // Sandwich menu
 const mainNavSandwich = document.querySelector('.header-nav__mobile-menu-button');
-const mainNavMenuContainer = document.querySelector('.header-nav__container');
-const mainNav = document.querySelector('.main-nav');
+const mainNav = document.querySelector('.header-nav');
+const topContent = document.querySelector('.main-content');
 
 const getMobileMenu = () => {
-  mainNavMenuContainer.classList.remove('header-nav__container-nojs');
-  mainNavMenuContainer.classList.add('main-header__toggle--closed');
+  mainNavSandwich.classList.add('header-nav__mobile-menu-button--closed');
+  mainNav.classList.add('header-nav--closed');
 
-  mainNav.classList.add('main-nav--closed');
+  mainNavSandwich.addEventListener('click', () => {
+    if (mainNav.classList.contains('header-nav--closed')) {
+      mainNavSandwich.classList.remove('header-nav__mobile-menu-button--closed');
+      mainNavSandwich.classList.add('header-nav__mobile-menu-button--opened');
 
-  if (mainNavSandwich) {
-    mainNavSandwich.addEventListener('click', () => {
-      if (mainNav.classList.contains('main-nav--closed')) {
-        mainNavSandwich.classList.remove('main-header__toggle--closed');
-        mainNavSandwich.classList.add('main-header__toggle--opened');
+      mainNav.classList.remove('header-nav--closed');
+      mainNav.classList.add('header-nav--opened');
+      topContent.style.marginTop = '270px';
+    } else {
+      mainNavSandwich.classList.remove('header-nav__mobile-menu-button--opened');
+      mainNavSandwich.classList.add('header-nav__mobile-menu-button--closed');
 
-        mainNav.classList.remove('main-nav--closed');
-        mainNav.classList.add('main-nav--opened');
-      } else {
-        mainNavSandwich.classList.remove('main-header__toggle--opened');
-        mainNavSandwich.classList.add('main-header__toggle--closed');
+      mainNav.classList.remove('header-nav--opened');
+      mainNav.classList.add('header-nav--closed');
 
-        mainNav.classList.remove('main-nav--opened');
-        mainNav.classList.add('main-nav--closed');
-      }
-    });
-  }
+      topContent.style.marginTop = '120px';
+    }
+  });
 };
 
 

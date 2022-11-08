@@ -1,8 +1,27 @@
 .header-nav {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  overflow: hidden;
+  width: 0;
+  margin-left: auto;
+  margin-right: -70px;
+  height: 185px;
+  transition: 0.6s;
+
+  &--closed {
+    margin-right: -200px;
+    height: 0;
+    width: 0;
+    transition: 0.6s;
+  }
+
+  &--opened {
+    height: 185px;
+    width: 100%;
+    margin-right: 20px;
+    transition: 0.6s;
+  }
 }
 
 .header-nav__logo {
@@ -12,21 +31,17 @@
 }
 
 .header-nav__list {
+  width: fit-content;
   display: flex;
   .list-none();
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .header-nav__item {
-  transition: transform .3s, width .3s;
-
-  &:hover {
-    color: #4E4E4E;
-    margin-right: 20px;
-    transition: color .3s, margin-right .3s;
-  }
+  transition: transform 0.3s;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -38,33 +53,53 @@
   text-transform: uppercase;
   font-size: 18px;
   line-height: 21px;
-  color: #F3F3F3;
+  color: #f3f3f3;
+  transition: color 0.3s;
 
   &:hover {
-    color: #4E4E4E;
-    transition: color .3s;
+    color: #4e4e4e;
+    transition: color 0.3s;
   }
 }
 
-.active_menu {
-  .header-nav__item {
+.header-nav__mobile-menu-button {
+  border: 0;
+  background: none;
+  width: 32px;
+  height: 32px;
+  margin-top: 5px;
+  position: relative;
 
-    &:nth-child(1) {
-      top: 18px;
-      transform: rotate(135deg);
-      transition: transform .3s;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #ffffff;
+    height: 1px;
+    width: 100%;
+    transition: transform 0.3s, width 0.3s;
+  }
+
+  &--closed {
+    &::before {
+      top: 8px;
     }
 
-    &:nth-child(3) {
-      bottom: 18px;
+    &::after {
+      bottom: 16px;
+    }
+  }
+
+  &--opened {
+    &::before {
       transform: rotate(-135deg);
-      transition: transform .3s;
+      transition: transform 0.3s;
     }
-  }
-}
 
-.header-nav__container-nojs {
-  .header-nav__mobile-menu-button {
-    display: none;
+    &::after {
+      transform: rotate(135deg);
+      transition: transform 0.3s;
+    }
   }
 }
