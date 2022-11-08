@@ -1,26 +1,30 @@
 .header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  overflow: hidden;
-  width: 0;
-  margin-left: auto;
-  margin-right: -70px;
-  height: 185px;
   transition: 0.6s;
 
-  &--closed {
-    margin-right: -200px;
-    height: 0;
+  @media (max-width: @max-telephone-width) {
+    margin-right: -70px;
+    overflow: hidden;
     width: 0;
-    transition: 0.6s;
+    height: 185px;
+    margin-left: auto;
+
+    &--closed {
+      margin-right: -200px;
+      height: 0;
+      width: 0;
+      transition: 0.6s;
+    }
+
+    &--opened {
+      height: 185px;
+      width: 100%;
+      margin-right: 20px;
+      transition: 0.6s;
+    }
   }
 
-  &--opened {
-    height: 185px;
-    width: 100%;
-    margin-right: 20px;
-    transition: 0.6s;
+  @media (min-width: @desktop-width) {
+    width: fit-content;
   }
 }
 
@@ -38,13 +42,24 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .header-nav__item {
   transition: transform 0.3s;
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    @media (max-width: @max-telephone-width) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 45px;
+    }
   }
 }
 
@@ -59,6 +74,33 @@
   &:hover {
     color: #4e4e4e;
     transition: color 0.3s;
+  }
+
+  &--career {
+    display: block;
+    padding: 18px 43px 18px 43px;
+    box-sizing: border-box;
+    min-width: 170px;
+    background: linear-gradient(140.6deg, #FFFFFF -27.18%, #DEDEDE 126.06%);
+    box-shadow: 0 0 49px rgba(42, 7, 254, 0.4);
+    border-radius: 10px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    text-align: left;
+    text-transform: none;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: url("../../../../public/img/career-arrow.svg") no-repeat center center;
+      right: 35px;
+    }
   }
 }
 
@@ -101,5 +143,9 @@
       transform: rotate(135deg);
       transition: transform 0.3s;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }

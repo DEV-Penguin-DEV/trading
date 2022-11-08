@@ -12,6 +12,21 @@
     height: 272px;
     bottom: 78px;
   }
+
+  @media (max-width: @max-telephone-width) {
+    &::after {
+      position: absolute;
+      content: "";
+      background: url("../../../../public/img/first-screen-bg-pattern.svg") no-repeat;
+      background-position: top center;
+      background-size: cover;
+      left: 0 - @mobile-padding;
+      width: 100vw;
+      height: 100%;
+      top: -150px;
+      z-index: -2;
+    }
+  }
 }
 
 .first-screen__title {
