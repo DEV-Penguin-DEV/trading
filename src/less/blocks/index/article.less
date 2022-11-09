@@ -7,6 +7,7 @@
   padding: 35px 27px;
   box-sizing: border-box;
   position: relative;
+  transition: 0.4s;
 
   &::before {
     content: "";
@@ -98,6 +99,11 @@
     @media (min-width: @desktop-width) {
       margin: 0;
     }
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    border: 3px solid #747679;
   }
 }
 

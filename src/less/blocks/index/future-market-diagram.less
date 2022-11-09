@@ -1,5 +1,6 @@
 /* stylelint-disable max-nesting-depth */
 .future-market-diagram {
+  cursor: pointer;
   max-width: fit-content;
   margin: 0 auto;
   position: relative;
@@ -51,11 +52,16 @@
   border: 2px solid rgba(255, 255, 255, 0.4);
   width: 334px;
   position: relative;
+  transition: 0.4s;
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+  }
+
+  &:hover {
+    box-shadow: inset -5px -5px 25px rgba(231, 231, 231, 0.5);
   }
 }
 
@@ -68,6 +74,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.1s;
 
   font-size: 14px;
   line-height: 130%;
@@ -87,6 +94,10 @@
     content: "";
     position: absolute;
     background: linear-gradient(#908f93 0%, #5e5971 100%);
+  }
+
+  &:hover {
+    border: 2px solid #747679;
   }
 }
 
@@ -209,6 +220,10 @@
       top: 26px;
       left: 0;
     }
+  }
+
+  &:hover {
+    box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
   }
 
   .future-market-diagram__block {
