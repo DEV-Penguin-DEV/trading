@@ -2,6 +2,7 @@
   position: relative;
   padding-bottom: 414px;
 
+
   &::before {
     position: absolute;
     content: "";
@@ -11,12 +12,22 @@
     width: 272px;
     height: 272px;
     bottom: 78px;
+
+
+    @media (min-width: @desktop-width) {
+      width: 575px;
+      height: 435px;
+      right: 0 - @desktop-padding;
+      top: 0;
+      background-image: url("../../../../public/img/first-screen-diagram--desktop.png");
+    }
   }
 
-  @media (max-width: @max-telephone-width) {
-    &::after {
-      position: absolute;
-      content: "";
+  &::after {
+    position: absolute;
+    content: "";
+
+    @media (max-width: @max-telephone-width) {
       background: url("../../../../public/img/first-screen-bg-pattern.svg") no-repeat;
       background-position: top center;
       background-size: cover;
@@ -26,6 +37,19 @@
       top: -150px;
       z-index: -2;
     }
+
+    @media (min-width: @desktop-width) {
+      background: url("../../../../public/img/mouse-icon.png") no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 17px;
+      height: 29px;
+      bottom: 143px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 290px;
   }
 }
 
@@ -33,10 +57,18 @@
   font-weight: 600;
   font-size: 52px;
   line-height: 61px;
-  text-align: center;
   color: #ffffff;
   max-width: 375px;
   margin: 0 auto 20px auto;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    margin: 32px 0;
+    font-size: 96.38px;
+    line-height: 90px;
+    max-width: 720px;
+    text-align: left;
+  }
 }
 
 .first-screen__title-decor {
@@ -51,4 +83,12 @@
   max-width: 246px;
   margin: 0 auto;
   margin-bottom: 40px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 94px 0;
+    font-size: 25.7px;
+    line-height: 30px;
+    max-width: 600px;
+    text-align: left;
+  }
 }

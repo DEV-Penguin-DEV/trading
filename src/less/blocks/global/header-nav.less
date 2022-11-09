@@ -70,6 +70,7 @@
   line-height: 21px;
   color: #f3f3f3;
   transition: color 0.3s;
+  font-weight: 400;
 
   &:hover {
     color: #4e4e4e;
@@ -77,29 +78,31 @@
   }
 
   &--career {
-    display: block;
-    padding: 18px 43px 18px 43px;
-    box-sizing: border-box;
-    min-width: 170px;
-    background: linear-gradient(140.6deg, #FFFFFF -27.18%, #DEDEDE 126.06%);
-    box-shadow: 0 0 49px rgba(42, 7, 254, 0.4);
-    border-radius: 10px;
+    @media (min-width: @desktop-width) {
+      display: block;
+      padding: 18px 43px 18px 43px;
+      box-sizing: border-box;
+      min-width: 170px;
+      background: linear-gradient(140.6deg, #ffffff -27.18%, #dedede 126.06%);
+      box-shadow: 0 0 49px rgba(42, 7, 254, 0.4);
+      border-radius: 10px;
 
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-    text-align: left;
-    text-transform: none;
-    position: relative;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #000000;
+      text-align: left;
+      text-transform: none;
+      position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      background: url("../../../../public/img/career-arrow.svg") no-repeat center center;
-      right: 35px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: url("../../../../public/img/career-arrow.svg") no-repeat center center;
+        right: 35px;
+      }
     }
   }
 }

@@ -15,12 +15,14 @@
   color: @main-text-color;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    height: 1926px;
-    width: 100vw;
-    background: url("../../../../public/img/bg.svg"), no-repeat;
-    top: 598px;
+  @media (max-width: @max-telephone-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1926px;
+      width: 100vw;
+      background: url("../../../../public/img/bg.svg"), no-repeat;
+      top: 598px;
+    }
   }
 }
