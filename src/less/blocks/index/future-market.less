@@ -1,4 +1,32 @@
 .future-market {
+  position: relative;
+
+  @media (max-width: @max-telephone-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 169px;
+      height: 169px;
+
+      background: #666666;
+      filter: blur(250px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 182px;
+      height: 183px;
+
+      background: #929292;
+      filter: blur(225px);
+    }
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     padding-bottom: 261px;

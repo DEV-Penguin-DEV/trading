@@ -2,6 +2,36 @@
 .future-market-diagram {
   max-width: fit-content;
   margin: 0 auto;
+  position: relative;
+
+  @media (max-width: @max-telephone-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 192px;
+      height: 107px;
+      top: 208px;
+      right: 79px;
+
+      background: #949494;
+      opacity: 0.5;
+      filter: blur(275px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 477.3px;
+      height: 283.18px;
+      bottom: -175px;
+      left: -200px;
+
+      background: linear-gradient(180deg, rgba(0, 65, 218, 0.16) 0%, rgba(40, 0, 153, 0.16) 91.72%);
+      filter: blur(100px);
+      border-radius: 2.72px;
+      transform: rotate(131.65deg);
+    }
+  }
 
   @media (min-width: @desktop-width) {
     margin: 0;

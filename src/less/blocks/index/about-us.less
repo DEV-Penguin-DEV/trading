@@ -1,5 +1,37 @@
 .about-us {
   margin-bottom: 100px;
+  position: relative;
+
+  @media (max-width: @max-telephone-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 589.46px;
+      height: 349.73px;
+      right: -300px;
+      bottom: -500px;
+
+      /* stylelint-disable-next-line number-max-precision */
+      background: linear-gradient(180deg, rgba(0, 65, 218, 0.115) 0%, rgba(40, 0, 153, 0.115) 91.72%);
+      filter: blur(100px);
+      border-radius: 2.72px;
+      transform: rotate(131.65deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 477.3px;
+      height: 283.18px;
+      top: 175px;
+      left: -200px;
+
+      background: linear-gradient(180deg, rgba(0, 65, 218, 0.16) 0%, rgba(40, 0, 153, 0.16) 91.72%);
+      filter: blur(100px);
+      border-radius: 2.72px;
+      transform: rotate(131.65deg);
+    }
+  }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 183px;
