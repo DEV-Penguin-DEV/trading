@@ -35,11 +35,11 @@ function Header() {
 
       <nav className="main-header__header-nav header-nav header-nav--closed">
         <ul className="header-nav__list">
-          <li className="header-nav__item"><Link to={'https://dev-penguin-dev.github.io/trading/my-app/build/activities'} className="header-nav__link">Activities</Link></li>
-          <li className="header-nav__item"><Link to={'https://dev-penguin-dev.github.io/trading/my-app/build/technology'} className="header-nav__link">Technology</Link></li>
-          <li className="header-nav__item"><Link to={'https://dev-penguin-dev.github.io/trading/my-app/build/r&d'} className="header-nav__link">R&D</Link></li>
-          <li className="header-nav__item"><Link to={'https://dev-penguin-dev.github.io/trading/my-app/build/community'} className="header-nav__link">Community</Link></li>
-          <li className="header-nav__item"><Link to={'https://dev-penguin-dev.github.io/trading/my-app/build/career'} className="header-nav__link header-nav__link--career">Career</Link></li>
+          <li className="header-nav__item"><Link to={'/activities'} className="header-nav__link">Activities</Link></li>
+          <li className="header-nav__item"><Link to={'/technology'} className="header-nav__link">Technology</Link></li>
+          <li className="header-nav__item"><Link to={'/r&d'} className="header-nav__link">R&D</Link></li>
+          <li className="header-nav__item"><Link to={'/community'} className="header-nav__link">Community</Link></li>
+          <li className="header-nav__item"><Link to={'/career'} className="header-nav__link header-nav__link--career">Career</Link></li>
         </ul>
       </nav>
     </header>
