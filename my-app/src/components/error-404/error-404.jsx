@@ -5,7 +5,7 @@ import './error-404.css';
 function Error404() {
   return (
     <div className="error-404__container">
-      <Link to="/trading/my-app/build/" ><h1 className="error-404__title">На главную</h1></Link>
+      <Link to="/" ><h1 className="error-404__title">На главную</h1></Link>
       <div className="row">
         <div className="col-sm-12 col-md-12 mt-5 mb-5">
           <svg

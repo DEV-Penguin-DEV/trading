@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={'/trading/my-app/build/'}>
+        <Route path={'https://dev-penguin-dev.github.io/trading/my-app/build/'}>
           <Route index element={<MainPage/>} />
           <Route path={'/activities'} element={<Soon/>} />
           <Route path={'/technology'} element={<Soon />} />
