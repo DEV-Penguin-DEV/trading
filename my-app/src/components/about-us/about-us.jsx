@@ -9,7 +9,7 @@ function AboutUs() {
       <div className="about-us__desktop-container">
         <div className="about-us__chart-img-container">
           <picture>
-            <source media="(min-width: 1440px)" srcSet="img/Chart.png" width="497" height="493"/>
+            <source media="(min-width: 1440px)" srcSet="/trading/my-app/build/img/Chart.png" width="497" height="493"/>
 
             <img src="/trading/my-app/build/img/Chart.png" alt="" className="about-us__chart-img" aria-hidden="true"/>
           </picture>

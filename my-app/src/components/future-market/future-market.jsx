@@ -33,7 +33,7 @@ function FutureMarket() {
                 active traders</p>
 
           <picture>
-            <source media="(min-width: 1440px)" srcSet="img/arrow--desktop.svg" width="36" height="92"/>
+            <source media="(min-width: 1440px)" srcSet="/trading/my-app/build/img/arrow--desktop.svg" width="36" height="92"/>
 
             <img src="/trading/my-app/build/img/arrow.svg" className="future-market-diagram__img--arrow" width="40" height="58" alt=""
               aria-hidden="true"/>
