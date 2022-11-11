@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/trading/my-app/build/static/css/main.342af445.css",
-    "main.js": "/trading/my-app/build/static/js/main.0171e43e.js",
+    "main.js": "/trading/my-app/build/static/js/main.c41b762f.js",
     "index.html": "/index.html",
     "main.342af445.css.map": "/trading/my-app/build/static/css/main.342af445.css.map",
-    "main.0171e43e.js.map": "/trading/my-app/build/static/js/main.0171e43e.js.map"
+    "main.c41b762f.js.map": "/trading/my-app/build/static/js/main.c41b762f.js.map"
   },
-  "entrypoints": ["static/css/main.342af445.css", "static/js/main.0171e43e.js"]
+  "entrypoints": ["static/css/main.342af445.css", "static/js/main.c41b762f.js"]
 }
