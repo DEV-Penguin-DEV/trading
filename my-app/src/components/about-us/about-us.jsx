@@ -11,7 +11,7 @@ function AboutUs() {
           <picture>
             <source media="(min-width: 1440px)" srcSet="img/Chart.png" width="497" height="493"/>
 
-            <img src="img/Chart.png" alt="" className="about-us__chart-img" aria-hidden="true"/>
+            <img src="/trading/my-app/build/img/Chart.png" alt="" className="about-us__chart-img" aria-hidden="true"/>
           </picture>
           <ul className="about-us__chart-img-numbers">
             <li className="about-us__chart-img-number">10</li>
